@@ -1,0 +1,8 @@
+.Nav {
+  display: flex;
+}
+
+.Nav .A {
+  padding-left: 1em;
+  padding-block: .25em;
+}
