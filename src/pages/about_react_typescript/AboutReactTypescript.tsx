@@ -54,6 +54,8 @@ export function AboutReactTypescript(props: React.HTMLAttributes<HTMLDivElement>
 
     completed_tasks.set(completed)
     tasks.set(active)
+    console.log(tasks.get())
+    console.log(completed_tasks.get())
   }
 
   return (
