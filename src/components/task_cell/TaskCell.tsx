@@ -8,7 +8,8 @@ import { Draggable } from 'react-beautiful-dnd'
 
 type TaskCellProps = React.FormHTMLAttributes<HTMLFormElement> & {
   task: Task,
-  tasks: UseStateObject<Task[]>
+  tasks: UseStateObject<Task[]>,
+  index: number
 }
 
 interface Edit {
@@ -89,11 +90,11 @@ export function TaskCell(props: TaskCellProps) {
   }
 
   return (
-    <Draggable draggableId={props.task.id.toString()} index={props.task.id}>
+    <Draggable draggableId={props.task.id.toString()} index={props.index}>
       {
-        (provided) => (
+        (provided, snapshot) => (
           <form
-            className={`TaskCell ${props.className || ''}`}
+            className={`TaskCell ${props.className || ''} ${snapshot.isDragging? 'isTaskCellDragging' : ''}`}
             onSubmit={onEdit}
             ref={provided.innerRef}
             {...props}
@@ -121,37 +122,6 @@ export function TaskCell(props: TaskCellProps) {
               </span>
             </div>
           </form>
-
-          // createElement('form', {
-          //   ...props,
-          //   ...provided.draggableProps,
-          //   ...provided.dragHandleProps,
-          //   ref: provided.innerRef,
-          //   onSubmit: onEdit,
-          //   className: `TaskCell ${props.className || ''}`,
-          //   children: <>
-          //     {onField()}
-          //     <div>
-          //       {
-          //         !props.task.isDone && <span 
-          //           onClick={onEdit}
-          //           className='TaskCellIcon'>
-          //           <AiFillEdit/>
-          //         </span>
-          //       }
-          //       <span 
-          //         onClick={onDelete}
-          //         className='TaskCellIcon'>
-          //         <AiFillDelete/>
-          //       </span>
-          //       <span 
-          //         onClick={onDone}
-          //         className='TaskCellIcon'>
-          //         <MdDone/>
-          //       </span>
-          //     </div>
-          //   </>
-          // })
         )
       }
     </Draggable>

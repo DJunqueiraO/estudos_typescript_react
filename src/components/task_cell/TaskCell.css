@@ -45,3 +45,7 @@
 .TaskCellTextDone {
   text-decoration: revert;
 }
+
+.isTaskCellDragging {
+  box-shadow: 0 0 20px black;
+}

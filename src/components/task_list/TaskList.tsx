@@ -23,7 +23,7 @@ export function TaskList(props: TaskListProps) {
               []
             ).map(
               (task: Task, index: number) => (
-                <TaskCell key={index} task={task} tasks={props.tasks}/>
+                <TaskCell key={index} index={index} task={task} tasks={props.tasks}/>
               )
             )
           }

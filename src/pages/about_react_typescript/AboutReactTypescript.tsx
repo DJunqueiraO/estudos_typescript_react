@@ -15,7 +15,7 @@ export function AboutReactTypescript(props: React.HTMLAttributes<HTMLDivElement>
     if(task_name.get()) {
       tasks.set(
         [...tasks.get(),
-          new Task(tasks.get().length, task_name.get())
+          new Task(tasks.get().length + completed_tasks.get().length, task_name.get())
         ]
       )
       task_name.set('')
@@ -23,7 +23,37 @@ export function AboutReactTypescript(props: React.HTMLAttributes<HTMLDivElement>
   }
 
   const onDragEnd = (result: DropResult) => {
-    console.log(result)
+    const {source, destination} = result
+    if(
+      !destination ||
+      (
+        destination.droppableId === source.droppableId && 
+        destination.index === source.index
+      )
+    ) {
+      return
+    }
+
+    let add
+    let active = tasks.get()
+    let completed = completed_tasks.get()
+
+    if(source.droppableId === 'tasks') {
+      add = tasks.get()[source.index]
+      active.splice(source.index, 1)
+    } else {
+      add = completed[source.index]
+      completed.splice(source.index, 1)
+    }
+
+    if(destination.droppableId === 'tasks') {
+      active.splice(destination.index, 0, add)
+    } else {
+      completed.splice(destination.index, 0, add)
+    }
+
+    completed_tasks.set(completed)
+    tasks.set(active)
   }
 
   return (
