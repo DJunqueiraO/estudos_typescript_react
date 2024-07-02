@@ -88,19 +88,18 @@ export function TaskCell(props: TaskCellProps) {
       <span className="TaskCellText">{props.task.name}</span>
     )
   }
-
+  
   return (
-    <Draggable draggableId={props.task.id.toString()} index={props.index}>
+    <Draggable draggableId={`${props.className || ''}${props.index}`} index={props.index}>
       {
         (provided, snapshot) => (
           <form
-            className={`TaskCell ${props.className || ''} ${snapshot.isDragging? 'isTaskCellDragging' : ''}`}
-            onSubmit={onEdit}
-            ref={provided.innerRef}
             {...props}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
-          >
+            className={`TaskCell ${props.className || ''} ${snapshot.isDragging? 'isTaskCellDragging' : ''}`}
+            onSubmit={onEdit}
+            ref={provided.innerRef}>
             {onField()}
             <div>
               {

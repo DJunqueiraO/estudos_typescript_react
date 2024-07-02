@@ -19,10 +19,12 @@ export function TaskContainer(props: TaskContainerProps) {
         {
           (provided, snapshot) => (
             <div 
-              className={`TaskContainerActiveList ${snapshot.isDraggingOver? 'isActiveDraggingOver' : ''}`}
+              className={`TaskContainerActiveListDiv ${snapshot.isDraggingOver? 'isActiveDraggingOver' : ''}`}
               ref={provided.innerRef} {...provided.droppableProps}>
               <span className="TasksHeading">Active Tasks</span>
-              <TaskList tasks={props.tasks} />
+              <TaskList 
+                className='TaskContainerActiveList' 
+                tasks={props.tasks}/>
               {provided.placeholder}
             </div>
           )
@@ -32,10 +34,12 @@ export function TaskContainer(props: TaskContainerProps) {
         {
           (provided, snapshot) => (
             <div 
-              className={`TaskContainerCompletedList ${snapshot.isDraggingOver? 'isCompletedDraggingOver' : ''}`}
+              className={`TaskContainerCompletedListDiv ${snapshot.isDraggingOver? 'isCompletedDraggingOver' : ''}`}
               ref={provided.innerRef} {...provided.droppableProps}>
               <span className="TasksHeading">Completed Tasks</span>
-              <TaskList tasks={props.completed_tasks} />
+              <TaskList 
+                className='TaskContainerCompletedList' 
+                tasks={props.completed_tasks}/>
               {provided.placeholder}
             </div>
           )
