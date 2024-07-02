@@ -4,8 +4,11 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
   border: none;
+  list-style: none;
 }
 
 html, body, #root {
   height: 100%;
+  overflow: hidden;
+  background-color: #2f74c0;
 }

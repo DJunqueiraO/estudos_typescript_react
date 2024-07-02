@@ -1,6 +1,5 @@
-.App {
-  height: 100%;
+.TaskList {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  overflow: auto;
 }

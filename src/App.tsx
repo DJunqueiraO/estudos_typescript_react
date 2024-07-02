@@ -4,7 +4,7 @@ import { AboutReactTypescript, AboutTypes, Home } from './pages/Pages';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Nav } from './components/Components';
 
-const App: React.FC = () => {
+export function App() {
 
   const routes = [
     <Home/>,
@@ -34,5 +34,3 @@ const App: React.FC = () => {
     </Router>
   );
 }
-
-export { App }

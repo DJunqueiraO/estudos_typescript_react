@@ -1,3 +1,7 @@
 A {
-  
+  color: white;
+}
+
+A:visited {
+  color: #9bd7ff;
 }
