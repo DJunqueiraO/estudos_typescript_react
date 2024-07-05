@@ -1,3 +1,17 @@
+export { Td } from './td/Td'
+
+export { Th } from './th/Th'
+
+export { Tr } from './tr/Tr'
+
+export { Table } from './table/Table'
+
+export { Column } from './column/Column'
+
+export { Row } from './row/Row'
+
+export { Grid } from './grid/Grid'
+
 export { TaskContainer } from './task_container/TaskContainer'
 
 export { TaskCell } from './task_cell/TaskCell'

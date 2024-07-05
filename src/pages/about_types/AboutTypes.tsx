@@ -49,7 +49,7 @@ export function AboutTypes(props: React.HTMLAttributes<HTMLDivElement>) {
   }
 
   return (
-    <div className='AboutTypes'>
+    <div className='about-types'>
       {showName(josicleison)}<br/>
       {showDescription(josicleison)}<br/>
       {JSON.stringify(y)}

@@ -60,7 +60,7 @@ export function AboutReactTypescript(props: React.HTMLAttributes<HTMLDivElement>
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <div className='AboutReactTypescript'>
+      <div className='about-react-typescript'>
         <span className='heading'>taskify</span>
         <TaskForm
           onSubmit={add}

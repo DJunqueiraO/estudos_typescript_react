@@ -1,18 +1,18 @@
-import { createElement, forwardRef } from 'react'
+import { forwardRef } from 'react'
 import './Input.css'
 
-export const Input = forwardRef(
+export const Input = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
   function (
     props: React.InputHTMLAttributes<HTMLInputElement>,
     ref
   ) {
     return (
-      createElement('input', {
-        ...props, ref,
-        className: `Input ${props.className || ''}`,
-        placeholder: props.placeholder,
-        type: props.type || "input"
-      })
+      <input 
+        {...props}
+        ref={ref}
+        className={`input ${props.className || ''}`}
+        placeholder={props.placeholder}
+        type={props.type || "input"}/>
     )
   }
 )

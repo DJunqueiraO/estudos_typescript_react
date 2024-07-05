@@ -7,7 +7,9 @@ interface NavProps extends React.HTMLAttributes<HTMLElement> {
 
 export function Nav(props: NavProps) {
   return (
-    <nav className='Nav'>
+    <nav 
+      {...props}
+      className='nav'>
       {
         props.routes.map(
           ($0, index) => (

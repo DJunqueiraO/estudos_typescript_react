@@ -1,4 +1,4 @@
-.TaskContainer {
+.task-container {
   display: flex;
   width: 95%;
   margin-top: 10px;
@@ -6,34 +6,34 @@
   align-items: flex-start;
 }
 
-.TasksHeading {
+.tasks-heading {
   font-size: 30px;
   color: white;
 }
 
-.TaskContainerActiveListDiv {
+.task-container-active-list-div {
   background-color: rgb(50, 195, 205);
 }
 
-.TaskContainerCompletedListDiv {
+.task-container-completed-list-div {
   background-color: rgb(235, 103, 80);
 }
 
-.isCompletedDraggingOver,
-.isActiveDraggingOver {
+.is-completed-dragging-over,
+.is-active-dragging-over {
   pointer-events: none;
 }
 
-.isCompletedDraggingOver {
+.is-completed-dragging-over {
   background-color: rgb(255, 38, 0);
 }
 
-.isActiveDraggingOver {
+.is-active-dragging-over {
   background-color: rgb(0, 221, 236);
 }
 
-.TaskContainerActiveListDiv, 
-.TaskContainerCompletedListDiv {
+.task-container-active-list-div, 
+.task-container-completed-list-div {
   display: flex;
   flex-direction: column;
   width: 47%;
@@ -41,12 +41,12 @@
 }
 
 @media (max-width: 700px) {
-  .TaskContainerActiveListDiv, 
-  .TaskContainerCompletedListDiv {
+  .task-container-active-list-div, 
+  .task-container-completed-list-div {
     width: 95%;
     margin-bottom: 10px;
   }
-  .TaskContainer {
+  .task-container {
     width: 95%;
     flex-direction: column;
   }

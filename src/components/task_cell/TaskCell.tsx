@@ -77,15 +77,15 @@ export function TaskCell(props: TaskCellProps) {
     if(edit.get().enabled) return (
       <input
         ref={input}
-        className="TaskCellInput"
+        className="task-cell-input"
         value={edit.get().name}
         onChange={event => edit.set({...edit.get(), name: event.target.value})}/>
     )
     if(props.task.isDone) return (
-      <s className="TaskCellText TaskCellTextDone">{props.task.name}</s>
+      <s className="task-cell-text task-cell-text-done">{props.task.name}</s>
     )
     return (
-      <span className="TaskCellText">{props.task.name}</span>
+      <span className="task-cell-text">{props.task.name}</span>
     )
   }
   
@@ -97,7 +97,7 @@ export function TaskCell(props: TaskCellProps) {
             {...props}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
-            className={`TaskCell ${props.className || ''} ${snapshot.isDragging? 'isTaskCellDragging' : ''}`}
+            className={`task-cell ${props.className || ''} ${snapshot.isDragging? 'is-task-cell-dragging' : ''}`}
             onSubmit={onEdit}
             ref={provided.innerRef}>
             {onField()}
@@ -105,18 +105,18 @@ export function TaskCell(props: TaskCellProps) {
               {
                 !props.task.isDone && <span 
                   onClick={onEdit}
-                  className='TaskCellIcon'>
+                  className='task-cell-icon'>
                   <AiFillEdit/>
                 </span>
               }
               <span 
                 onClick={onDelete}
-                className='TaskCellIcon'>
+                className='task-cell-icon'>
                 <AiFillDelete/>
               </span>
               <span 
                 onClick={onDone}
-                className='TaskCellIcon'>
+                className='task-cell-icon'>
                 <MdDone/>
               </span>
             </div>

@@ -18,7 +18,7 @@ const TaskForm: React.FC<TaskFormProps> = (props) => {
         if(props.onSubmit) props.onSubmit(event)
         input.current?.blur()
       },
-      className: `TaskForm ${props.className || ''}`,
+      className: `task-form ${props.className || ''}`,
       children: <>
         <Input 
           ref={input}

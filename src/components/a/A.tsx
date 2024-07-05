@@ -4,7 +4,7 @@ export function A(props: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
   return (
     <a 
       href={props.href}
-      className='A'>
+      className='a'>
       {props.children}
     </a>
   )

@@ -1,15 +1,15 @@
-.TaskForm {
+.task-form {
   display: flex;
   width: 90%;
   position: relative;
   align-items: center;
 }
 
-.TaskForm Input:focus {
+.task-form Input:focus {
   box-shadow: 0 0 10px 1000px rgba(0,0,0,.5);
 }
 
-.TaskForm Button {
+.task-form Button {
   margin: 12px;
   position: absolute;
   right: 0;

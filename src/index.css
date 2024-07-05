@@ -5,6 +5,7 @@
   text-decoration: none;
   border: none;
   list-style: none;
+  border-spacing: 0;
 }
 
 html, body, #root {

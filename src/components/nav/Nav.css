@@ -1,7 +1,7 @@
-.Nav {
+.nav {
   display: flex;
 }
 
-.Nav .A {
+.nav .a {
   padding: .5em;
 }
