@@ -1,4 +1,4 @@
-import { Grid, Table } from '../../components/Components'
+import { Grid, Row, Table, Td } from '../../components/Components'
 import './Home.css'
 
 export function Home(props: React.HTMLAttributes<HTMLDivElement>) {
@@ -15,14 +15,14 @@ export function Home(props: React.HTMLAttributes<HTMLDivElement>) {
       </Grid>
       <Table
         thead_children={[
-          ['Item 1', 'Item 2', 'Item 3'],
-          ['Item 1', 'Item 2'],
-          ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+          [1, 2, 3],
+          [1, 2],
+          [1, 2, 3, 4, 5],
         ]}
         tbody_children={[
-          ['Item 1', 'Item 2', 'Item 3'],
-          ['Item 1', 'Item 2'],
-          ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+          [1, 2, 3],
+          [1, 2],
+          [1, 2, 3, 4, 5],
         ]}
         />
     </div>
