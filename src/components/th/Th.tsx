@@ -1,6 +1,8 @@
 import './Th.css'
 
-export function Th(props: React.ThHTMLAttributes<HTMLTableHeaderCellElement>) {
+export type ThProps = React.ThHTMLAttributes<HTMLTableHeaderCellElement>
+
+export function Th(props: ThProps) {
   return (
     <th
       {...props}

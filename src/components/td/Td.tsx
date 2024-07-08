@@ -1,6 +1,8 @@
 import './Td.css'
 
-export function Td(props: React.TdHTMLAttributes<HTMLTableDataCellElement>) {
+export type TdProps = React.TdHTMLAttributes<HTMLTableDataCellElement>
+
+export function Td(props: TdProps) {
   return (
     <td
       {...props}

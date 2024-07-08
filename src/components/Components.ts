@@ -1,14 +1,14 @@
-export { Td } from './td/Td'
+export { Td, type TdProps } from './td/Td'
 
-export { Th } from './th/Th'
+export { Th, type ThProps } from './th/Th'
 
-export { Tr } from './tr/Tr'
+export { Tr, type TrProps } from './tr/Tr'
 
 export { Table } from './table/Table'
 
-export { Column } from './column/Column'
+export { Column, type ColumnProps } from './column/Column'
 
-export { Row } from './row/Row'
+export { Row, type RowProps } from './row/Row'
 
 export { Grid } from './grid/Grid'
 

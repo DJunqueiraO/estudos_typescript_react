@@ -1,6 +1,8 @@
 import './Tr.css'
 
-export function Tr(props: React.HTMLAttributes<HTMLTableRowElement>) {
+export type TrProps = React.HTMLAttributes<HTMLTableRowElement>
+
+export function Tr(props: TrProps) {
   return (
     <tr
       {...props}
