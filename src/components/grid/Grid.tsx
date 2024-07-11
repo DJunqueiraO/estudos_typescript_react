@@ -2,7 +2,6 @@ import { Column, ColumnProps, Row, RowProps } from '../Components'
 
 type GridProps = (
   React.HTMLAttributes<HTMLDivElement> & 
-  React.CSSProperties & 
   {
     children?: Array<Array<React.ReactNode>>,
     align_columns?: "true" | "false",
@@ -29,25 +28,35 @@ export function Grid(props: GridProps) {
       className={`Grid ${props.className || ''}`}>
       {
         props?.children?.map(
-          (line, index) => (
-            <Row 
-              {...props.row_props}
-              height={props?.fill_vertically === 'true' ? `${100/(numberOfRows)}%` : 'auto'}
-              max_items={on_max_items()} 
-              key={index}>
-              {
-                line.map(
-                  (column, index) => (
-                    <Column 
-                      {...props.column_props}
-                      key={index}>
-                      {column}
-                    </Column>
-                  )
-                )
+          (line, index) => {
+
+            const on_style = () => {
+              const fill_vertically = props?.fill_vertically === 'true'
+              return {...props.row_props?.style,
+                height: `${fill_vertically? `${100/(numberOfRows)}%` : 'auto'}`
               }
-            </Row>
-          )
+            }
+
+            return (
+              <Row 
+                {...props.row_props}
+                style={on_style()}
+                max_items={on_max_items()} 
+                key={index}>
+                {
+                  line.map(
+                    (column, index) => (
+                      <Column 
+                        {...props.column_props}
+                        key={index}>
+                        {column}
+                      </Column>
+                    )
+                  )
+                }
+              </Row>
+            )
+          }
         )
       }
     </div>
