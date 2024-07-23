@@ -1,0 +1,35 @@
+.CssProTips3 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CssProTips3 input {
+  display: none;
+}
+
+.CssProTips3 input,
+.CssProTips3 label {
+  cursor: pointer;
+}
+
+.CssProTips3 label {
+  user-select: none;
+  width: 100%;
+  background-color: aquamarine;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.CssProTips3 .ExampleBox {
+  height: 50px;
+  width: 100%;
+  background-color: aquamarine;
+  margin-top: 25px;
+  display: none;
+}
+
+#input_checkbox:checked ~ .ExampleBox {
+  display: block;
+}

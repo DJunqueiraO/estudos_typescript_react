@@ -1,6 +1,20 @@
 import React from 'react';
 import './App.css';
-import { AboutReactTypescript, AboutTypes, Home } from './pages/Pages';
+import { 
+  AboutReactTypescript, 
+  AboutTypes, 
+  CssProTips1, 
+  CssProTips10, 
+  CssProTips2, 
+  CssProTips3, 
+  CssProTips4, 
+  CssProTips5, 
+  CssProTips6, 
+  CssProTips7, 
+  CssProTips8, 
+  CssProTips9, 
+  Home 
+} from './pages/Pages';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Nav } from './components/Components';
 
@@ -9,10 +23,20 @@ export function App() {
   const routes = [
     <Home/>,
     <AboutTypes/>,
-    <AboutReactTypescript/>
+    <AboutReactTypescript/>,
+    <CssProTips1/>,
+    <CssProTips2/>,
+    <CssProTips3/>,
+    <CssProTips4/>,
+    <CssProTips5/>,
+    <CssProTips6/>,
+    <CssProTips7/>,
+    <CssProTips8/>,
+    <CssProTips9/>,
+    <CssProTips10/>
   ].map(
     element => {
-      const path = element.type.href || element.type.name.toLowerCase()
+      const path = `/${element.type.href || element.type.name.toLowerCase()}`
       return (
         <Route 
           key={path} 

@@ -1,0 +1,24 @@
+.CssProTips8 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.CssProTips8 input {
+  display: none;
+}
+
+.CssProTips8 label {
+  cursor: pointer;
+  font-weight: bold;
+  background-color: bisque;
+  border-radius: 5px;
+  padding: 5px;
+  user-select: none;
+}
+
+.CssProTips8:has(input:checked) label {
+  background-color: red;
+  color: white;
+}

@@ -1,0 +1,17 @@
+.CssProTips6 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: url(../../assets/33.jpg) no-repeat center center;
+}
+
+.CssProTips6 * {
+  height: min(150px, 90%);
+  width: min(150px, 19%);
+  background-color: red;
+}
+
+.CssProTips6 *:not(:first-child) {
+  background-color: rgb(0, 0, 0, .5);
+}

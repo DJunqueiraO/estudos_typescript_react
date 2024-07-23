@@ -1,0 +1,29 @@
+.CssProTips1 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.CssProTips1 * {
+  height: 50px;
+  width: 50px;
+}
+
+.CssProTips1 *:nth-child(1) {
+  background-color: red;
+  resize: both;
+  overflow: hidden;
+}
+
+.CssProTips1 *:nth-child(2) {
+  background-color: green;
+  resize: horizontal;
+  overflow: hidden;
+}
+
+.CssProTips1 *:nth-child(3) {
+  background-color: blue;
+  resize: vertical;
+  overflow: hidden;
+}
