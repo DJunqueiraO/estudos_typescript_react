@@ -1,3 +1,7 @@
+export { CssProTips12 } from './css_pro_tips_12/CssProTips12'
+
+export { CssProTips11 } from './css_pro_tips_11/CssProTips11'
+
 export { CssProTips10 } from './css_pro_tips_10/CssProTips10'
 
 export { CssProTips9 } from './css_pro_tips_9/CssProTips9'

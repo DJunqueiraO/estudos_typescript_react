@@ -5,6 +5,8 @@ import {
   AboutTypes, 
   CssProTips1, 
   CssProTips10, 
+  CssProTips11, 
+  CssProTips12, 
   CssProTips2, 
   CssProTips3, 
   CssProTips4, 
@@ -33,7 +35,9 @@ export function App() {
     <CssProTips7/>,
     <CssProTips8/>,
     <CssProTips9/>,
-    <CssProTips10/>
+    <CssProTips10/>,
+    <CssProTips11/>,
+    <CssProTips12/>
   ].map(
     element => {
       const path = `/${element.type.href || element.type.name.toLowerCase()}`

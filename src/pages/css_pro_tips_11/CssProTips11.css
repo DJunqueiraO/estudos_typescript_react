@@ -1,0 +1,23 @@
+.CssProTips11 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: bisque;
+  counter-reset: headings;
+}
+
+.CssProTips11 h2 {
+  counter-increment: headings;
+}
+
+.CssProTips11 h2::before {
+  content: counter(headings);
+  color: white;
+  background-color: blue;
+  border-radius: 50%;
+  padding-inline: 10px;
+  margin-right: 10px;
+  text-align: center;
+}

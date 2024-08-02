@@ -1,0 +1,53 @@
+.CssProTips12 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: aquamarine;
+}
+
+.CssProTips12 .wrapper {
+  display: flex;
+  gap: 20px;
+  width: 300px;
+  overflow-x: scroll;
+  background-color: greenyellow;
+  scroll-snap-type: x mandatory;
+  counter-reset: headings;
+}
+
+.CssProTips12 .wrapper::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+  background-color: #f9f9f9;
+}
+
+.CssProTips12 .wrapper::-webkit-scrollbar-thumb {
+  background-color: red;
+}
+
+.CssProTips12 .card {
+  scroll-snap-align: center;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  background-color: coral;
+  flex-shrink: 0;
+  width: 300px;
+  border-color: white;
+  height: 300px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.CssProTips12 .card h2 {
+  counter-increment: headings;
+}
+
+.CssProTips12 .card h2::after {
+  content: counter(headings);
+  color: white;
+  border-radius: 50%;
+  padding-inline: 5px;
+  text-align: center;
+}
